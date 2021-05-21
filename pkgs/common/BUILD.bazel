@@ -1,5 +1,5 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "js_library", "pkg_npm")
-load("@npm//@bazel/typescript:index.bzl", "ts_project")
+load("//tools:index.bzl", "ts_project")
 load("//tools:jest.bzl", "jest_test")
 
 package(default_visibility = ["//visibility:public"])
@@ -20,10 +20,7 @@ SRCS = glob(
 ts_project(
     name = "src",
     srcs = SRCS,
-    declaration = True,
-    declaration_map = True,
     tsconfig = "//:tsconfig.json",
-    deps = ["@npm//tslib"],
 )
 
 # Export library to be consumed

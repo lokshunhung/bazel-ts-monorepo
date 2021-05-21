@@ -1,7 +1,9 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm//@bazel/rollup:index.bzl", "rollup_bundle")
 load("@npm//@bazel/terser:index.bzl", "terser_minified")
-load("@npm//@bazel/typescript:index.bzl", "ts_project")
+
+# load("@npm//@bazel/typescript:index.bzl", "ts_project")
+load("//tools:index.bzl", "ts_project")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -14,13 +16,8 @@ SRCS = glob(
 ts_project(
     name = "src",
     srcs = SRCS,
-    declaration = True,
-    declaration_map = True,
     tsconfig = "//:tsconfig.json",
-    deps = [
-        "//pkgs/common:lib",
-        "@npm//tslib",
-    ],
+    deps = ["//pkgs/common:lib"],
 )
 
 # Bundle JS files

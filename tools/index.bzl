@@ -1,8 +1,8 @@
 """Tools used internal for this repository.
 """
 
-def ts_project(name, srcs, deps):
-    deps = deps + ["@npm/tslib"]
-    ts_config(
-        name = "%s-tsconfig" % name,
-    )
+load("typescript.bzl", _ts_project = "ts_project")
+load("jest.bzl", _jest_test = "jest_test")
+
+ts_project = _ts_project
+jest_test = _jest_test

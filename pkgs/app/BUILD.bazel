@@ -1,11 +1,6 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm//@bazel/rollup:index.bzl", "rollup_bundle")
-load("@npm//@bazel/terser:index.bzl", "terser_minified")
-
-# load("@npm//@bazel/typescript:index.bzl", "ts_project")
-load("//tools:index.bzl", "ts_project")
-
-package(default_visibility = ["//visibility:public"])
+load("//tools:index.bzl", "terser_minified", "ts_project")
 
 SRCS = glob(
     ["src/**/*.ts"],
@@ -37,8 +32,6 @@ rollup_bundle(
 terser_minified(
     name = "bundle.min",
     src = ":bundle",
-    config_file = "terser_config.json",
-    sourcemap = False,
 )
 
 # Create execution target

@@ -11,6 +11,8 @@ Pythagoras Theorm:
 ${result} = √( (${a})^2  + (${b})^2 )
 
 ==============================`);
+
+    console.log(pythagoras.toString());
 }
 
 main();

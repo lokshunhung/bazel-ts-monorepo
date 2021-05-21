@@ -1,6 +1,5 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "js_library", "pkg_npm")
-load("//tools:index.bzl", "ts_project")
-load("//tools:jest.bzl", "jest_test")
+load("//tools:index.bzl", "jest_test", "ts_project")
 
 package(default_visibility = ["//visibility:public"])
 

@@ -1,0 +1,41 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@npm//@bazel/rollup:index.bzl", "rollup_bundle")
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+
+SRCS = glob(
+    ["src/**/*.ts"],
+    exclude = ["src/**/*.spec.ts"],
+) + ["index.ts"]
+
+# Compile to JS
+ts_project(
+    name = "src",
+    srcs = SRCS,
+    declaration = True,
+    declaration_map = True,
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "//pkgs/common:lib",
+        "@npm//tslib",
+    ],
+)
+
+# Bundle JS files
+rollup_bundle(
+    name = "bundle",
+    srcs = [":src"],
+    config_file = "rollup.config.js",
+    entry_point = "index.js",
+    deps = [
+        "//pkgs/common:lib",
+        "@npm//@rollup/plugin-alias",
+        "@npm//@rollup/plugin-node-resolve",
+    ],
+)
+
+# Create execution target
+nodejs_binary(
+    name = "run",
+    data = [":bundle"],
+    entry_point = "bundle.js",
+)

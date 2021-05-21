@@ -1,8 +1,6 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "js_library", "pkg_npm")
 load("//tools:index.bzl", "jest_test", "ts_project")
 
-package(default_visibility = ["//visibility:public"])
-
 jest_test(
     name = "test",
     srcs = glob(["src/**/*.ts"]),
@@ -27,7 +25,7 @@ js_library(
     name = "lib",
     package_name = "@bazelmono/common",
     srcs = ["package.json"],
-    visibility = ["//visibility:public"],
+    visibility = ["//:__subpackages__"],
     deps = [":src"],
 )
 

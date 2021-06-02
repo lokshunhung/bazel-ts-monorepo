@@ -24,7 +24,7 @@
         "@rollup/plugin-node-resolve": "13.0.0",
         "@types/jest": "26.0.23",
         "jest": "27.0.3",
-        "rollup": "2.50.1",
+        "rollup": "2.50.5",
         "terser": "5.7.0",
         "ts-jest": "27.0.2",
         "tslib": "2.2.0",

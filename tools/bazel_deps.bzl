@@ -11,8 +11,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 def fetch_build_bazel_rules_nodejs():
     http_archive(
         name = "build_bazel_rules_nodejs",
-        urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/3.5.0/rules_nodejs-3.5.0.tar.gz"],
-        sha256 = "10f534e1c80f795cffe1f2822becd4897754d18564612510c59b3c73544ae7c6",
+        sha256 = "0fa2d443571c9e02fcb7363a74ae591bdcce2dd76af8677a95965edf329d778a",
+        urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/3.6.0/rules_nodejs-3.6.0.tar.gz"],
     )
 
 # rules_nodejs doesn't depend on skylib, but it's a useful dependency anyway.

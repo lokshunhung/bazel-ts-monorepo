@@ -23,6 +23,7 @@ load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
 
 yarn_install(
     name = "npm",  # Name this "npm" so that Bazel Label references look like @npm//package
+    exports_directories_only = True,  # (performance) node_modules as directories: https://github.com/bazelbuild/rules_nodejs/releases/tag/3.6.0
     package_json = "//:package.json",
     yarn_lock = "//:yarn.lock",
 )

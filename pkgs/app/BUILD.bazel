@@ -23,7 +23,6 @@ rollup_bundle(
     entry_point = "index.js",
     deps = [
         "//pkgs/common:lib",
-        "@npm//@rollup/plugin-alias",
         "@npm//@rollup/plugin-node-resolve",
     ],
 )

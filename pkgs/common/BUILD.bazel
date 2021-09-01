@@ -32,6 +32,7 @@ js_library(
 # Create NPM Package
 pkg_npm(
     name = "pkg",
+    package_name = "@bazelmono/common",
     srcs = ["package.json"],
     tgz = "bazelmono_common.tgz",
     deps = [":src"],

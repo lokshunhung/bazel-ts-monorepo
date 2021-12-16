@@ -14,19 +14,19 @@
         ]
     },
     "devDependencies": {
-        "@bazel/bazelisk": "1.10.1",
-        "@bazel/buildifier": "4.2.3",
+        "@bazel/bazelisk": "1.11.0",
+        "@bazel/buildifier": "4.2.4",
         "@bazel/ibazel": "0.15.10",
-        "@bazel/rollup": "4.4.6",
-        "@bazel/terser": "4.4.6",
-        "@bazel/typescript": "4.4.6",
-        "@rollup/plugin-node-resolve": "13.0.6",
+        "@bazel/rollup": "4.5.0",
+        "@bazel/terser": "4.5.0",
+        "@bazel/typescript": "4.5.0",
+        "@rollup/plugin-node-resolve": "13.1.1",
         "@types/jest": "27.0.3",
-        "jest": "27.4.3",
-        "rollup": "2.60.2",
+        "jest": "27.4.5",
+        "rollup": "2.61.1",
         "terser": "5.10.0",
-        "ts-jest": "27.0.7",
+        "ts-jest": "27.1.1",
         "tslib": "2.3.1",
-        "typescript": "4.5.2"
+        "typescript": "4.5.4"
     }
 }

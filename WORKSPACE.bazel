@@ -7,13 +7,13 @@ workspace(
     },
 )
 
-load(
-    "//tools:bazel_deps.bzl",
-    "fetch_bazel_skylib",
-    "fetch_build_bazel_rules_nodejs",
-)
+load("//tools:bazel_deps.bzl", "fetch_bazel_skylib", "fetch_build_bazel_rules_nodejs")
 
 fetch_bazel_skylib()
+
+load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
+
+bazel_skylib_workspace()
 
 fetch_build_bazel_rules_nodejs()
 

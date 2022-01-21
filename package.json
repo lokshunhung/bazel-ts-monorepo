@@ -17,16 +17,16 @@
         "@bazel/bazelisk": "1.11.0",
         "@bazel/buildifier": "4.2.5",
         "@bazel/ibazel": "0.15.10",
-        "@bazel/rollup": "4.6.1",
-        "@bazel/terser": "4.6.1",
-        "@bazel/typescript": "4.6.1",
+        "@bazel/rollup": "5.0.0",
+        "@bazel/terser": "5.0.0",
+        "@bazel/typescript": "5.0.0",
         "@rollup/plugin-node-resolve": "13.1.3",
         "@types/jest": "27.4.0",
         "jest": "27.4.7",
-        "rollup": "2.63.0",
+        "rollup": "2.64.0",
         "terser": "5.10.0",
-        "ts-jest": "27.1.2",
+        "ts-jest": "27.1.3",
         "tslib": "2.3.1",
-        "typescript": "4.5.4"
+        "typescript": "4.5.5"
     }
 }
